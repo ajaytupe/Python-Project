@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+<br>
 
-<div class="centered-text" style="color: blue;">
+<div class="text-center" style="color: blue;">
     {% if is_creation %}
         <h1>Create a Contact</h1>
     {% else %}
         <h1>Edit Contact</h1>
     {% endif %}
 </div>
+<br>
 
-<form method="post" style="width: 26rem; align-items: center;">
+<div class="container">
+<form class="mx-auto" method="post" style="width: 26rem;">
     {% csrf_token %}
     
     <div class="form-group">
@@ -42,7 +45,7 @@
     <br>
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
-
+</div>
 <hr>
 <div class="centered-text" style="color: green;">
     <h4>&copy; Created by Ajay Tupe</h4>
